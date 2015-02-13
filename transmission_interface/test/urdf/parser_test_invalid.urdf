@@ -4,6 +4,7 @@
 
 <!-- No transmission name -->
 <transmission>
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type> <!--No name attribute-->
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -15,7 +16,32 @@
 </transmission>
 
 <transmission>
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission name=""</type> <!--Empty name attribute-->
+  <joint name="baz_joint">
+    <offset>0.5</offset>
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="baz_actuator">
+    <mechanicalReduction>50</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<!-- No/Empty transmission robotNamespace -->
+<transmission name="simple_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="baz_joint">
+    <offset>0.5</offset>
+    <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="baz_actuator">
+    <mechanicalReduction>50</mechanicalReduction>
+  </actuator>
+</transmission>
+
+<transmission name="simple_trans">
+  <robotNamespace></robotNamespace> <!-- Empty -->
+  <type>transmission_interface/SimpleTransmission</type> 
   <joint name="baz_joint">
     <offset>0.5</offset>
     <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
@@ -27,6 +53,7 @@
 
 <!-- No transmission type -->
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <!--<type>transmission_interface/SimpleTransmission</type>-->
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -38,6 +65,7 @@
 </transmission>
 
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type></type> <!-- Empty -->
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -50,6 +78,7 @@
 
 <!-- No hardware interface -->
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -61,6 +90,7 @@
 </transmission>
 
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -73,6 +103,7 @@
 
 <!-- No actuator name -->
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -84,6 +115,7 @@
 </transmission>
 
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint name="baz_joint">
     <offset>0.5</offset>
@@ -96,6 +128,7 @@
 
 <!-- No joint name -->
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint> <!--No name attribute-->
     <offset>0.5</offset>
@@ -107,6 +140,7 @@
 </transmission>
 
 <transmission name="simple_trans">
+  <robotNamespace>my_robot_ns</robotNamespace>
   <type>transmission_interface/SimpleTransmission</type>
   <joint name=""> <!--Empty name attribute-->
     <offset>0.5</offset>

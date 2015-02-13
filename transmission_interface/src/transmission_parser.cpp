@@ -75,6 +75,22 @@ bool TransmissionParser::parse(const std::string& urdf, std::vector<Transmission
       continue;
     }
 
+    // Transmission robotNamespace
+    TiXmlElement *ns_child = trans_it->FirstChildElement("robotNamespace");
+    if(!ns_child)
+    {
+      ROS_ERROR_STREAM_NAMED("parser","No robotNamespace element found in transmission '"
+        << transmission.name_ << "'.");
+      continue;
+    }
+    if (!ns_child->GetText())
+    {
+      ROS_ERROR_STREAM_NAMED("parser","Skipping empty robotNamespace element in transmission '"
+                             << transmission.name_ << "'.");
+      continue;
+    }
+    transmission.robot_namespace_ = ns_child->GetText();
+
     // Transmission type
     TiXmlElement *type_child = trans_it->FirstChildElement("type");
     if(!type_child)

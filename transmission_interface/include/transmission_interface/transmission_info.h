@@ -78,6 +78,7 @@ struct ActuatorInfo
 struct TransmissionInfo
 {
   std::string name_;
+  std::string robot_namespace_;
   std::string type_;
   std::vector<JointInfo> joints_;
   std::vector<ActuatorInfo> actuators_;
