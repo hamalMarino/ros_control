@@ -86,6 +86,9 @@ class VelocityJointInterface : public JointCommandInterface {};
 /// \ref JointCommandInterface for commanding position-based joints.
 class PositionJointInterface : public JointCommandInterface {};
 
+/// \ref JointCommandInterface for commanding cartesian-based joints. DUMMY CLASS TO TRIGGER CARTESIAN INTERFACE
+class PositionCartesianInterface : public JointCommandInterface {};
+
 }
 
 #endif
